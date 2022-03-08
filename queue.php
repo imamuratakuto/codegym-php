@@ -12,8 +12,11 @@ function enqueue($str){
 function denqueue(){
     global $queue;  //$queueを関数内でも使えるようにしています。
     //ここからソースコードを記載してください。
+    //count関数で配列の要素の数を調べる
+    $count = count($queue);
+    //配列の添字を絶対０にしないといけないので$countに０をかける
     //unset関数で指定の配列を削除
-    unset($queue[0]);
+    unset($queue[$count * 0]);
     /*unsetで削除した後の歯抜けになった配列を
     arry_values関数で数値添字の配列を返してもらう*/
     $queue = array_values($queue);
