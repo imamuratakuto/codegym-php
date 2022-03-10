@@ -18,9 +18,9 @@ function pop(){
     unset($stack[$count - 1]);
     /*unsetで削除した後の歯抜けになった配列を
     arry_values関数で数値添字の配列を返してもらう*/
-    //$stack = array_values($stack);
+    $stack = array_values($stack);
     //array_mergeで配列を返してもらう
-    $stack = array_merge($stack);
+    //$stack = array_merge($stack);
     //ここまでソースコードを記載してください。
 }
 
